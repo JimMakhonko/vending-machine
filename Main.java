@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -10,7 +12,10 @@ public class Main {
              { new Item("Fanta", 1.99, 2) , new Item("Barq's", 1.49, 2), new Item("A & W", 2.49, 3) },
              { new Item("Crush", 1.99, 2) , new Item("C-Cola", 1.49, 2), new Item("Berry", 2.49, 1) }
          };
-         Item item = new Item(items[0][0]);
-        System.out.println(item);
+
+         Machine machine = new Machine(items);
+machine.dispence(0,0);
+        System.out.println(machine.getItem(0,0));
+
     }
 }

@@ -8,11 +8,13 @@ public class Item {
         this.price = price;
         this.quantity = quantity;
     }
-public Item(Item sourse){
-        this.name = sourse.name;
-        this.price = sourse.price;
-        this.quantity = sourse.quantity;
-}
+
+    public Item(Item source) {
+        this.name = source.name;
+        this.price = source.price;
+        this.quantity = source.quantity;
+    }
+
     public String getName() {
         return name;
     }
@@ -39,6 +41,6 @@ public Item(Item sourse){
 
     @Override
     public String toString() {
-        return this.name + ": " + this.price +" ("+ this.quantity+")";
+        return this.name + ": " + this.price + " (" + this.quantity + ")";
     }
 }
