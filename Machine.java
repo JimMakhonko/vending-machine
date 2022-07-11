@@ -17,16 +17,6 @@ public class Machine {
         this.items[row][spot] = new Item(item);
     }
 
-    @Override
-    public String toString() {
-        String temp = "";
-        for (int i = 0; i < items.length; i++) {
-            for (int j = 0; j < items[i].length; j++) {
-
-            }
-        }
-        return  temp;
-    }
     /**
      * Function name – dispense
      * @param row (int)
@@ -44,5 +34,18 @@ public class Machine {
             return true;
         }
         return false;
+    }
+    @Override
+    public String toString() {
+        String temp = "";
+        for (int i = 0; i < items.length; i++) {
+            temp +="\t";
+            for (int j = 0; j < items[i].length; j++) {
+                temp+=this.items[i][j].toString() ;
+            }
+            temp +="\n\n";
+        }
+        temp += "\t************************************************";
+        return  temp;
     }
 }
